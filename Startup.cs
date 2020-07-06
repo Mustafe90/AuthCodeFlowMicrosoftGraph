@@ -35,9 +35,9 @@ namespace AuthCodeFlowMicrosoftGraph
                 options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             }).AddOpenIdConnect(options =>
             {
-                options.Authority = "https://login.microsoftonline.com/74c6bfb9-08e2-4a30-a7d1-a8ef361cd197";
+                options.Authority = "https://login.microsoftonline.com/";
                 options.AuthenticationMethod = OpenIdConnectRedirectBehavior.RedirectGet;
-                options.ClientId = "7fc066d2-ffc8-4afb-bf2f-7f66b5464c6d";
+                options.ClientId = "";
                 options.CallbackPath = "/auth/signin-callback";
                 options.ResponseType = OpenIdConnectResponseType.IdToken;
                 options.SignedOutRedirectUri = "https://localhost:44374/auth/signout-callback";
