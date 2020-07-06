@@ -1,0 +1,10 @@
+﻿@using System.Security.Claims
+@{
+    var userName = User.Claims.Where(x => x.Type == ClaimTypes.Name).Select(x => x.Value).SingleOrDefault();
+}
+<h1>Hi name: @userName </h1>
+
+@foreach (var claim in User.Claims)
+{
+    <h5>@claim.Type: @claim.Value</h5>
+}
